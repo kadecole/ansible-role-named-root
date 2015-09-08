@@ -5,4 +5,4 @@
   register: named_root
 
 - get_url: url=http://www.internic.net/domain/named.root dest={{ bind_config_basepath }}/named.root checksum=md5:'{{ named_root_md5 }}'
-  when: 'named_root.stat.md5' ne '{{ named_root_md5 }}'
+  when: named_root.stat.md5 ne "{{ named_root_md5 }}"
