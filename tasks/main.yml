@@ -1,8 +1,17 @@
 ---
 # tasks file for ansible-role-named-root
 
-- stat: path={{ bind_config_basepath }}/named.root
-  register: named_root
+- name: Check for named.root file
+  stat: path={{ bind_config_basepath }}/named.root get_md5=True
+  register: sym
 
-- get_url: url=http://www.internic.net/domain/named.root dest={{ bind_config_basepath }}/named.root checksum=md5:'{{ named_root_md5 }}'
-  when: named_root.stat.md5 ne "{{ named_root_md5 }}"
+- name: Delete file if checksum fails
+  file: path={{ bind_config_basepath }}/named.root state=absent
+  when: sym.stat.islnk is defined and sym.stat.md5 != '{{ named_root_md5 }}'
+
+- name: Download named.root file from internic.net
+  get_url:
+    url="http://www.internic.net/domain/named.root"
+    dest="/etc/named.root"
+    sha256sum="{{ named_root_sha256 }}"
+#    checksum="sha256:9de827bda7ddb3b8d3fac2db56c0fe65a67772a12a874c75091ae8e3f2b31c73"
