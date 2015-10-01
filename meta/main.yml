@@ -1,8 +1,8 @@
 ---
 galaxy_info:
-  author: your name
-  description: 
-  company: your company (optional)
+  author: Kade Cole
+  description: Ansible Role Named Root
+  company: 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
   # issue_tracker_url: http://example.com/issue/tracker
@@ -20,7 +20,7 @@ galaxy_info:
   # the ones that apply to your role. If you don't see your 
   # platform on this list, let us know and we'll get it added!
   #
-  #platforms:
+  platforms:
   #- name: EL
   #  versions:
   #  - all
@@ -66,9 +66,9 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  #- name: FreeBSD
-  #  versions:
-  #  - all
+  - name: FreeBSD
+    versions:
+    - all
   #  - 8.0
   #  - 8.1
   #  - 8.2
@@ -78,9 +78,12 @@ galaxy_info:
   #  - 9.1
   #  - 9.1
   #  - 9.2
-  #- name: Ubuntu
-  #  versions:
-  #  - all
+  #   - 10.0
+  #   - 10.1
+  #   - 10.2
+  - name: Ubuntu
+    versions:
+    - all
   #  - lucid
   #  - maverick
   #  - natty
@@ -105,9 +108,9 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  #- name: Debian
-  #  versions:
-  #  - all
+  - name: Debian
+    versions:
+    - all
   #  - etch
   #  - jessie
   #  - lenny
