@@ -1,5 +1,5 @@
 ---
 # defaults file for ansible-role-named-root
 bind_config_basepath: /etc/bind
-named_root_md5: b2afc34d106e104730b63876c9a07caf
-named_root_sha256: 9de827bda7ddb3b8d3fac2db56c0fe65a67772a12a874c75091ae8e3f2b31c73
+named_root_md5: a1d7e8e26cf5697de1da80f1d6b52c67
+named_root_sha256: f2dd3ea44863ccd6f2b3089c5b98432a2ce6615a0b4c7c4350cbc23666a5d32d
