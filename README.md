@@ -36,7 +36,7 @@ Example Playbook
 ```
     - hosts: servers
       roles:
-         - { role: kadecole.ansible-role-named-root, x: 42 }
+         - { role: kadecole.ansible-role-named-root }
 ```
 
 License
