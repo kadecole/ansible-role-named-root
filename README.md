@@ -24,7 +24,7 @@ named_root_md5: a1d7e8e26cf5697de1da80f1d6b52c67
 named_root_sha256: f2dd3ea44863ccd6f2b3089c5b98432a2ce6615a0b4c7c4350cbc23666a5d32d
 ```
 
-The MD5 and sha256 hash for the cuurent named.root file found here: http://www.internic.net/domain/
+The MD5 and sha256 hash for the current named.root file found here: http://www.internic.net/domain/
 
 Dependencies
 ------------
