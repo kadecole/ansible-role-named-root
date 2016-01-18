@@ -12,5 +12,5 @@
 - name: Download named.root file from internic.net
   get_url:
     url="http://www.internic.net/domain/named.root"
-    dest="/etc/named.root"
+    dest="{{ bind_config_basepath }}/named.root"
     sha256sum="{{ named_root_sha256 }}"
